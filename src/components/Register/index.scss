@@ -1,0 +1,72 @@
+// @import '~antd/dist/antd.less';
+
+$primary-color: #1890ff; // Định nghĩa màu chính
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.login-card {
+  width: 400px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: slide-in 0.5s ease;
+}
+
+.login-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.login-form {
+  .login-form-forgot {
+    float: right;
+  }
+  .login-form-button {
+    width: 100%;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.error-message {
+  color: #f5222d;
+  animation: shake 0.5s ease-in-out;
+}
